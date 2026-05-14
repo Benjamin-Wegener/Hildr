@@ -5,7 +5,7 @@ import { createGrassTuft } from "./grass/createGrassTuft.js";
 export function createIslandGrass() {
   const group = new THREE.Group();
   const rng = createSeededRandom(24680);
-  const tuftCount = 150;
+  const tuftCount = 500;
   const outerRadius = 13.2;
   const centerClearRadius = 0.9;
 
@@ -31,6 +31,12 @@ export function createIslandGrass() {
     tuft.scale.multiplyScalar(range(rng, 0.75, 1.18) * (1 - edgeFalloff * 0.1));
     group.add(tuft);
   }
+
+  group.userData.update = (time) => {
+    for (const tuft of group.children) {
+      tuft.userData.update?.(time);
+    }
+  };
 
   return group;
 }

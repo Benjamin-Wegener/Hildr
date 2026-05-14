@@ -81,6 +81,7 @@ export function createIsland() {
   const grass = createIslandGrass();
   grass.position.y = 0.18;
   island.add(grass);
+  island.userData.update = grass.userData.update;
 
   return island;
 }

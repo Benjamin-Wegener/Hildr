@@ -19,7 +19,11 @@ export function createWorld(scene) {
   scene.add(water);
   updaters.push(updateWater);
 
-  scene.add(createIsland());
+  const island = createIsland();
+  scene.add(island);
+  if (island.userData.update) {
+    updaters.push(island.userData.update);
+  }
   scene.add(createMountainRings());
   scene.add(createShoreRocks());
 
