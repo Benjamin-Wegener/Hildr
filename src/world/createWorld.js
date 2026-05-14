@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { createSkyDome } from "./createSkyDome.js";
 import { createWaterSurface } from "./createWaterSurface.js";
 import { createMountainRings } from "./createMountainRings.js";
+import { createIsland } from "./createIsland.js";
 import { createShoreRocks } from "./createShoreRocks.js";
 import { createSunGlow } from "./createSunGlow.js";
 import { THEME } from "./theme.js";
@@ -18,6 +19,7 @@ export function createWorld(scene) {
   scene.add(water);
   updaters.push(updateWater);
 
+  scene.add(createIsland());
   scene.add(createMountainRings());
   scene.add(createShoreRocks());
 
