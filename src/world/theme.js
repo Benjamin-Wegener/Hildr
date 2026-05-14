@@ -1,0 +1,16 @@
+export const THEME = {
+  skyTop: 0x6fc4ff,
+  skyBottom: 0xdaf1ff,
+  fog: 0xaed0ea,
+  waterBase: 0x1f5f8f,
+  waterHighlight: 0x5ea7d6,
+  waterDeep: 0x123b61,
+  mountainNear: 0x2f4357,
+  mountainFar: 0x5c7890,
+  snow: 0xf4f9ff,
+  shoreRock: 0x5f5d5a,
+  moss: 0x6c8458,
+  cape: 0xc72b2b,
+  leather: 0x4a3328,
+  fur: 0xb39b7a,
+};
